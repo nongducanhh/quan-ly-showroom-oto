@@ -30,7 +30,7 @@ Hệ thống được xây dựng nhằm hỗ trợ công tác quản lý, theo 
 ![Ảnh chụp màn hình trang đăng nhập](public/images/trangdangnhap.png)
 
 ### Trang dashboard admin
-![Ảnh chụp màn hình trang admin](public/images/Screenshot_admin.png)
+![Ảnh chụp màn hình trang admin](public/images/.png)
 
 ### Trang dashboard giảng viên
 ![Ảnh chụp màn hình trang giảng viên](public/images/Screenshot_giangvien.png)
