@@ -1,0 +1,291 @@
+/* --- THIẾT KẾ AUDI - TỔNG THỂ --- */
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #0a0c10; /* THAY ĐỔI: Nền đen-xanh đậm như ảnh */
+  color: #e0e0e0; 
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color: #ffffff;
+  font-weight: 500; /* Font mỏng hơn cho hiện đại */
+}
+
+a {
+  color: #fff; /* Link màu trắng */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #aaa; /* Link hover màu xám */
+}
+
+/* --- THANH ĐIỀU HƯỚNG (NAVBAR) MỚI (Kiểu Audi) --- */
+.audi-nav {
+  position: fixed; /* Cố định trên cùng */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: grid; /* Dùng Grid để chia 3 cột */
+  grid-template-columns: auto 1fr auto; /* Logo | Links (tự co giãn) | Search */
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: #0a0c10; /* THAY ĐỔI: Nền đen-xanh đậm như ảnh */
+  z-index: 1000;
+  box-sizing: border-box; /* Quan trọng */
+  border-bottom: 1px solid #2a2d31; /* THAY ĐỔI: Viền dưới mỏng */
+}
+
+/* Cột 1: Logo */
+.nav-logo-svg {
+  padding-top: 5px; /* Căn chỉnh logo cho đẹp */
+}
+
+/* Cột 2: Links (Căn giữa) */
+.nav-links-center {
+  display: flex;
+  justify-content: center; /* Căn giữa các link */
+  gap: 1.5rem;
+}
+.nav-links-center a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.nav-links-center a.admin-link {
+  color: #007acc; /* Link "+ Thêm xe" màu xanh */
+}
+.nav-links-center a.admin-link:hover {
+  color: #4dabf7;
+}
+
+/* Cột 3: Tìm kiếm */
+.nav-search-svg {
+  justify-self: end; /* Đẩy icon về cuối cột */
+  cursor: pointer;
+}
+.nav-search-svg svg path {
+  transition: stroke 0.3s ease;
+}
+.nav-search-svg:hover svg path {
+  stroke: #aaa; /* Đổi màu icon khi hover */
+}
+
+
+/* --- BANNER TOÀN MÀN HÌNH --- */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Chiếm 100% chiều cao màn hình */
+  /* Làm ảnh "nét" hơn bằng cách giảm độ mờ của lớp phủ */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url('xe2.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  /* Đẩy chữ xuống góc dưới */
+  flex-direction: column;
+  justify-content: flex-end; /* Đẩy xuống dưới */
+  align-items: flex-start; /* Đẩy sang trái */
+  text-align: left;
+  color: #fff;
+  /* Thêm padding cho đẹp */
+  padding: 4rem 3rem; 
+  box-sizing: border-box;
+}
+.hero-banner h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  font-weight: 600;
+}
+.hero-banner p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  font-weight: 400;
+  max-width: 500px; /* Giới hạn chiều rộng của chữ */
+}
+
+/* --- NỘI DUNG CHÍNH (Tiêu đề + Lưới xe) --- */
+.main-content {
+  padding: 4rem 2rem; /* Thêm đệm cho nội dung */
+}
+
+/* --- TIÊU ĐỀ DANH SÁCH --- */
+.list-header {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 40px 0 30px 0;
+  font-weight: 600;
+}
+.center-container {
+  text-align: center;
+}
+
+/* --- LƯỚI XE (CAR GRID) MỚI --- */
+.car-list {
+  display: grid;
+  /* Lưới tự động co giãn, min 350px, max 1fr */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px; /* THAY ĐỔI: Giảm khoảng cách */
+  padding: 20px 0;
+}
+
+/* --- THẺ XE (CARD) MỚI (Kiểu "Đoạn này") --- */
+.car-card {
+  background: #1a1d21; /* THAY ĐỔI: Nền thẻ mới */
+  border: 1px solid #2a2d31; /* THAY ĐỔI: Viền thẻ mới */
+  border-radius: 16px; /* THAY ĐỔI: Bo tròn nhiều */
+  text-align: left;
+  box-shadow: none; /* Bỏ shadow cũ */
+  overflow: hidden; 
+  transition: all 0.3s ease;
+}
+.car-card:hover {
+  border-color: #4a4d51; /* THAY ĐỔI: Hover viền */
+  background: #1f2226; /* THAY ĐỔI: Hover nền */
+}
+.car-card img {
+  width: 100%;
+  height: 220px; /* Giữ nguyên chiều cao vùng ảnh */
+  object-fit: contain; /* THAY ĐỔI: Hiển thị toàn bộ ảnh, không cắt xén */
+  background-color: #000; /* THAY ĐỔI: Thêm nền đen cho phần ảnh bị hụt */
+  display: block;
+  border-bottom: 1px solid #2a2d31; /* THAY ĐỔI: Thêm viền dưới ảnh */
+}
+.car-info {
+  padding: 1.25rem; /* THAY ĐỔI: Điều chỉnh padding */
+}
+.car-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem; /* THAY ĐỔI: Cỡ chữ tên xe */
+  color: #fff; /* Tên xe màu trắng */
+}
+.car-info p {
+  margin: 5px 0;
+  color: #aaa; /* Chữ thông tin xám hơn */
+  font-size: 1rem;
+}
+.car-info p strong {
+  color: #e0e0e0; 
+}
+
+/* --- NÚT SỬA/XÓA (Kiểu "Discover") --- */
+.actions {
+  padding: 0 1.25rem 1.25rem 1.25rem; /* THAY ĐỔI: Điều chỉnh padding */
+  display: flex;
+  gap: 1rem; /* THAY ĐỔI: Khoảng cách nút */
+}
+.actions a {
+  /* THAY ĐỔI: Style lại nút giống "Discover" */
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px; /* Bo tròn nút */
+  text-decoration: none; /* Bỏ gạch chân */
+  font-weight: 500;
+  font-size: 0.9rem;
+  background-color: transparent; 
+  border: 1px solid #4a4d51; /* Viền xám */
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.actions a.edit-btn {
+  color: #e0e0e0; /* Nút Sửa màu trắng */
+  border-color: #4a4d51;
+}
+.actions a.edit-btn:hover {
+  background-color: #2a2d31;
+  border-color: #5a5d61;
+  color: #fff;
+}
+.actions a.delete-btn {
+  color: #b22222; /* Màu đỏ sẫm */
+  border-color: #b22222; /* Viền đỏ */
+}
+.actions a.delete-btn:hover {
+  background-color: #b22222; /* Nền đỏ khi hover */
+  color: #fff;
+}
+
+/* --- THÔNG BÁO KHÔNG CÓ XE --- */
+.no-cars {
+  color: #888;
+  font-size: 1.2rem;
+  text-align: center;
+  grid-column: 1 / -1; /* Chiếm toàn bộ lưới */
+}
+
+
+/* --- CSS CHO FORM (add_car.php, edit_car.php) --- */
+/* (Cập nhật form cho khớp với theme "dark mode" mới) */
+.form-container {
+  width: 90%;
+  max-width: 500px;
+  background: #1a1d21; /* THAY ĐỔI: Nền form mới */
+  margin: 120px auto 40px auto; /* THAY ĐỔI: Tăng margin-top */
+  padding: 30px;
+  border-radius: 16px; /* THAY ĐỔI: Bo tròn form */
+  border: 1px solid #2a2d31; /* THAY ĐỔI: Viền form */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5); /* THAY ĐỔI: Shadow mới */
+}
+.form-container h2 {
+  text-align: center;
+  color: #ffffff; /* THAY ĐỔI: Tiêu đề trắng */
+  margin-top: 0;
+}
+.form-container label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #bbb;
+}
+input[type="text"],
+input[type="number"],
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #4a4d51; /* THAY ĐỔI: Viền input */
+  border-radius: 8px; /* THAY ĐỔI: Bo tròn input */
+  background-color: #101214; /* THAY ĐỔI: Nền input */
+  color: #e0e0e0; /* THAY ĐỔI: Chữ input */
+  box-sizing: border-box; 
+}
+button {
+  background-color: #e0e0e0; /* THAY ĐỔI: Nút màu trắng */
+  color: #101214; /* THAY ĐỔI: Chữ đen */
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600; /* THAY ĐỔI: Chữ đậm hơn */
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #ffffff; /* THAY ĐỔI: Hover trắng sáng */
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #4a4d51; /* THAY ĐỔI */
+  border-radius: 8px; /* THAY ĐỔI */
+  background-color: #101214; /* THAY ĐỔI */
+  color: #e0e0e0; /* THAY ĐỔI */
+  box-sizing: border-box; 
+}
+input[type="file"]::file-selector-button {
+  background-color: #e0e0e0; /* THAY ĐỔI */
+  color: #101214; /* THAY ĐỔI */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-weight: 600; /* THAY ĐỔI */
+  transition: background-color 0.3s ease;
+}
+input[type="file"]::file-selector-button:hover {
+  background-color: #ffffff; /* THAY ĐỔI */
+}
