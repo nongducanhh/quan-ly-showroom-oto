@@ -32,11 +32,8 @@ Hệ thống được xây dựng nhằm hỗ trợ công tác quản lý, theo 
 ### Trang dashboard admin
 ![Ảnh chụp màn hình trang admin](public/images/.png)
 
-### Trang dashboard giảng viên
-![Ảnh chụp màn hình trang giảng viên](public/images/Screenshot_giangvien.png)
-
-### Trang dashboard sinh viên
-![Ảnh chụp màn hình trang sinh viên](public/images/Screenshot_sinhvien.png)
+### Trang dashboard thêm xe
+![Ảnh chụp màn hình trang giảng viên](public/images/Ảnh chụp màn hình 2025-11-06 140955.png)
 
 
 ## 4. Hướng dẫn cài đặt
