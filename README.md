@@ -33,7 +33,7 @@ Hệ thống được xây dựng nhằm hỗ trợ công tác quản lý, theo 
 ![Ảnh chụp màn hình trang admin](public/images/.png)
 
 ### Trang dashboard thêm xe
-![Ảnh chụp màn hình trang giảng viên](public/images/Ảnh chụp màn hình 2025-11-06 140955.png)
+![Ảnh chụp màn hình trang giảng viên](public/images/themxe.png)
 
 
 ## 4. Hướng dẫn cài đặt
