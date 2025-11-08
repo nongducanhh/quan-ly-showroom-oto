@@ -1,7 +1,7 @@
-# Hệ thống quản lý đồ án tốt nghiệp
+# Quản Lí Showroom Ô tô
 ## 1. Giới thiệu
 
-Nền tảng giúp kết nối sinh viên và giảng viên, tối ưu hóa mọi bước trong quá trình hoàn thành đồ án tốt nghiệp.
+Nền tảng giúp kết nối sinh viên và giảng viên, tối ưu hóa mọi bước trong quá trình hoàn thành quản lí showroom ô tôtô.
 Hệ thống được xây dựng nhằm hỗ trợ công tác quản lý, theo dõi và đánh giá hoạt động của sinh viên trong suốt quá trình làm đồ án. Thay vì quản lý thủ công, hệ thống mang đến một giải pháp tập trung, hiện đại và dễ sử dụng.
 
 ## 2. Các công nghệ được sử dụng
